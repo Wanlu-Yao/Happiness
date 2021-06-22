@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-<Group_1_Happiness Survey In the City of Somerville>
+<Happiness Survey In the City of Somerville>
 
 Copyright (c) 2020
 Licensed
@@ -20,8 +20,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import classification_report
 import warnings
-warnings.filterwarnings("ignore") 
-############################################################## Section One #########################################################################
+warnings.filterwarnings("ignore")
+
+############# Section One ################
 #Get the original dataframe
 def GET_DATA(url):
     df = pd.read_csv(url,header = 0)
@@ -121,7 +122,7 @@ def GET_RESULT(df3):
     return results_1
     
     
-############################################################### Section Two ########################################################################
+############# Section Two ################
 
 def GET_DATA_2(url):
     df = pd.read_csv(url, dtype={'2. Age?': object})
@@ -249,7 +250,7 @@ def RACE_DF(df2):
 
 
 
-############################################################## Section Three#####################################################################
+############# Section Three ################
 
 def GET_DATA_TREE(df1):
     DataTree = df1.drop(['satisfaction','language','move away plan'],axis = 1)
